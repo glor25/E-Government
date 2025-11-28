@@ -5,9 +5,7 @@ import {
   Globe, Award, Zap, UploadCloud, FileCheck, XCircle, Clock, Menu, CreditCard, X, Users
 } from 'lucide-react';
 
-// ==========================================
 // 1. COMPONENTS (VIEWS & SECTIONS)
-// ==========================================
 
 // --- Dashboard Home View ---
 const DashboardHome = ({ userType, documents }) => {
@@ -368,45 +366,67 @@ const DocumentProducts = () => {
 };
 
 // --- Partners Section ---
+import imigrasiLogo from "./assets/imigrasibg.png";
+import polriLogo from "./assets/polri.png";
+import tniLogo from "./assets/tnibg.png";
+
 const Partners = () => {
   return (
     <section className="py-24 px-4 bg-white">
-       <div className="max-w-5xl mx-auto text-center">
-         <h2 className="text-4xl font-black text-slate-900 mb-2 tracking-tight">Partner Institution</h2>
-         <p className="text-indigo-600 font-bold tracking-widest uppercase text-xs mb-16">MEET OUR TRUSTED PARTNERS</p>
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-black text-slate-900 mb-2 tracking-tight">Partner Institution</h2>
+        <p className="text-green-600 font-bold tracking-widest uppercase text-xs mb-16">MEET OUR TRUSTED PARTNERS</p>
 
-         <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
-            <div className="group flex flex-col items-center gap-6 cursor-default">
-               <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-indigo-100 group-hover:bg-indigo-50 transition-all duration-500 shadow-sm group-hover:scale-110">
-                 <Globe size={48} className="text-slate-400 group-hover:text-indigo-600 transition-colors duration-300" strokeWidth={1.5} />
-               </div>
-               <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-indigo-700 transition-colors">
-                 Kementerian Imigrasi
-               </span>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+          
+          {/* Kementerian Imigrasi */}
+          <div className="group flex flex-col items-center gap-6 cursor-default">
+            <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-green-100 group-hover:bg-green-50 transition-all duration-500 shadow-sm group-hover:scale-110 overflow-hidden">
+              <img 
+                src={imigrasiLogo} // Panggil variabel import tadi
+                alt="Logo Imigrasi" 
+                className="w-20 h-20 object-contain drop-shadow-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
+            <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-green-700 transition-colors">
+              Imigrasi
+            </span>
+          </div>
 
-            <div className="group flex flex-col items-center gap-6 cursor-default">
-               <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-indigo-100 group-hover:bg-indigo-50 transition-all duration-500 shadow-sm group-hover:scale-110">
-                 <ShieldCheck size={48} className="text-slate-400 group-hover:text-indigo-600 transition-colors duration-300" strokeWidth={1.5} />
-               </div>
-               <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-indigo-700 transition-colors">
-                 POLRI
-               </span>
+          {/* POLRI */}
+          <div className="group flex flex-col items-center gap-6 cursor-default">
+            <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-green-100 group-hover:bg-green-50 transition-all duration-500 shadow-sm group-hover:scale-110 overflow-hidden">
+              <img 
+                src={polriLogo} // Panggil variabel import tadi
+                alt="Logo POLRI"
+                className="w-20 h-20 object-contain drop-shadow-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
+            <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-green-700 transition-colors">
+              POLRI
+            </span>
+          </div>
 
-            <div className="group flex flex-col items-center gap-6 cursor-default">
-               <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-indigo-100 group-hover:bg-indigo-50 transition-all duration-500 shadow-sm group-hover:scale-110">
-                 <Award size={48} className="text-slate-400 group-hover:text-indigo-600 transition-colors duration-300" strokeWidth={1.5} />
-               </div>
-               <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-indigo-700 transition-colors">
-                 TNI
-               </span>
+          {/* TNI */}
+          <div className="group flex flex-col items-center gap-6 cursor-default">
+            <div className="w-32 h-32 bg-slate-50 rounded-full flex items-center justify-center border-[6px] border-slate-100 group-hover:border-green-100 group-hover:bg-green-50 transition-all duration-500 shadow-sm group-hover:scale-110 overflow-hidden">
+               <img 
+                src={tniLogo} // Panggil variabel import tadi
+                alt="Logo TNI" 
+                className="w-20 h-20 object-contain drop-shadow-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
-         </div>
-       </div>
+            <span className="font-bold text-slate-700 text-base tracking-tight group-hover:text-green-700 transition-colors">
+              TNI
+            </span>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
-}
+};
+
 // 2. MAIN COMPONENTS
 
 const Navbar = ({ isLoggedIn, onLoginClick, onSignUpClick, onLogout, activeUserType }) => (

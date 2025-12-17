@@ -947,7 +947,7 @@ export default function App() {
                 <div>
                     <label className="block text-xs font-bold text-slate-400 uppercase mb-2">Full Name</label>
                     <input className="w-full px-5 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none" 
-                           value={authForm.name} onChange={e => setAuthForm({...authForm, name: e.target.value})} placeholder="John Doe"/>
+                           value={authForm.name} onChange={e => setAuthForm({...authForm, name: e.target.value})} placeholder="Your Name"/>
                 </div>
             )}
             <div>

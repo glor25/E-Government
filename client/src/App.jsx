@@ -132,10 +132,10 @@ const MyDocumentsView = ({ documents, onUpload, loading }) => {
                   onChange={(e) => setFormData({...formData, type: e.target.value})}
                   className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
                 >
-                  <option>Surat Keterangan</option>
-                  <option>Akta Kelahiran (Scan)</option>
-                  <option>Ijazah (Scan)</option>
-                  <option>NPWP</option>
+                  <option>KTP (ID Card)</option>
+                  <option>KK (Family Card)</option>
+                  <option>Akta Kelahiran</option>
+                  <option>Sertifikasi Tanah</option>
                 </select>
              </div>
              <div className="flex-1 w-full">
@@ -212,23 +212,6 @@ const MyDocumentsView = ({ documents, onUpload, loading }) => {
   );
 };
 
-// --- Wallet View (Integrated) ---
-const WalletView = ({ wallet }) => (
-  <div className="animate-fadeIn max-w-2xl">
-    <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><Wallet className="text-blue-600"/> Digital Wallet</h2>
-    <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 rounded-[2rem] text-white shadow-2xl mb-8">
-      <p className="text-slate-400 mb-2">Wallet Balance</p>
-      <h3 className="text-5xl font-black mb-8">0.00 <span className="text-2xl text-slate-500">ETH</span></h3>
-      <div className="flex justify-between items-end">
-        <div>
-          <p className="text-slate-400 text-xs uppercase mb-1">Address</p>
-          <p className="font-mono bg-white/10 px-3 py-1 rounded-lg text-sm">{wallet || 'Not Connected'}</p>
-        </div>
-        <div className="flex items-center gap-2 text-green-400 text-sm font-bold bg-green-400/10 px-3 py-1 rounded-full"><div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"/> Connected</div>
-      </div>
-    </div>
-  </div>
-);
 
 // --- History View (Shared) ---
   const HistoryView = ({ user }) => {
@@ -602,7 +585,6 @@ const Sidebar = ({ user, activeMenu, onMenuClick, notificationCount }) => {
   const citizenMenus = [
     { id: 'dashboard', label: 'Dashboard', icon: UserCircle },
     { id: 'documents', label: 'My Documents', icon: FileText },
-    { id: 'wallet', label: 'Digital Wallet', icon: Wallet },
     { id: 'history', label: 'Activity History', icon: History },
     { id: 'profile', label: 'Profile', icon: User },
   ];

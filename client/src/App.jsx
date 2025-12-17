@@ -179,7 +179,7 @@ const MyDocumentsView = ({ documents, onUpload, loading }) => {
               onClick={() => setPreviewDoc(doc)}
               className="w-full py-2 bg-slate-50 text-slate-600 font-bold text-sm rounded-xl hover:bg-indigo-600 hover:text-white transition"
              >Preview Document</button>
-            <button onClick={() => handleDownload(doc.id)} className="w-full py-2 bg-slate-50 text-slate-600 font-bold text-sm rounded-xl group-hover:bg-blue-600 group-hover:text-white transition">View Details</button>
+            <button onClick={() => handleDownload(doc.id)} className="w-full py-2 bg-slate-50 text-slate-600 font-bold text-sm rounded-xl group-hover:bg-blue-600 group-hover:text-white transition">Download</button>
           </div>
           
         ))}
@@ -344,15 +344,7 @@ const VerificationView = ({ documents, onVerifyAction }) => {
     
     <div className="animate-fadeIn">
       <h2 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2"><Search className="text-blue-600"/> Verify Document</h2>
-      
-      {/* Existing Search Functionality */}
-      <div className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 mb-8 max-w-3xl">
-        <p className="text-slate-500 mb-6">Enter the unique hash ID of the document to verify its authenticity on the blockchain.</p>
-        <div className="flex gap-3 mb-6">
-          <input className="flex-1 px-5 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. 0x829..." />
-          <button className="px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition">Check</button>
-        </div>
-      </div>
+     
 
       {/* NEW: Pending Verification List */}
       <div className="mt-10">
